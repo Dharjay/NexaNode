@@ -21,7 +21,7 @@
   </head>
   <body class="flex justify-center">
     <div
-      class="w-full max-w-[1920px] grid grid-cols-1 gap-[20px] grid-rows-[.1fr_2fr_.1fr] pt-[140px] md:grid-rows-[.1fr_1fr_.1fr] 2xl:grid-rows-[.1fr_5fr_.5fr] md:pt-[150px]"
+      class="w-full max-w-[1920px] grid grid-cols-1 gap-[20px] grid-rows-[.1fr_2fr_1.3fr_.1fr] md:grid-rows-[.1fr_2fr_1.3fr_.1fr] pt-[140px] lg:grid-rows-[.1fr_1fr_.5fr_.1fr] 2xl:grid-rows-[.1fr_5fr_2.6fr_.1fr] md:pt-[150px]"
     >
       <!-- navbar -->
       <div
@@ -197,7 +197,7 @@
 
       <!-- blog_wrapper -->
       <div class="blog_wrapper p-[25px]">
-        <div class="h-full w-full grid md:grid-cols-2 gap-5">
+        <div class="h-full w-full grid lg:grid-cols-2 gap-5">
           <!-- main blog -->
           <div
             class="slideLeftCard grid grid-cols-1 grid-rows-[.3fr_.7fr_1fr] md:grid-rows-[.1fr_1fr_.7fr] md:gap-5 primary-font text-black border-b-1 border-black md:border-b-0"
@@ -277,10 +277,10 @@
           >
             <!-- blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
+              class="overflow-hidden group grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
             >
               <div
-                class="bg-cover bg-center"
+                class="bg-cover bg-center group-hover:scale-110 transition ease"
                 style="
                   background-image: url(&quot;assets/images/blogs/pexels-pixabay-261662.jpg&quot;);
                 "
@@ -323,10 +323,10 @@
 
             <!-- blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
+              class="overflow-hidden group grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
             >
               <div
-                class="bg-cover bg-center"
+                class="bg-cover bg-center group-hover:scale-110 transition ease"
                 style="
                   background-image: url(&quot;assets/images/blogs/cover-89.png&quot;);
                 "
@@ -370,10 +370,10 @@
 
             <!-- blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
+              class="overflow-hidden group grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
             >
               <div
-                class="bg-cover bg-center"
+                class="bg-cover bg-center group-hover:scale-110 transition ease"
                 style="
                   background-image: url(&quot;assets/images/blogs/cover-93-1.png&quot;);
                 "
@@ -417,10 +417,10 @@
 
             <!-- blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
+              class="overflow-hidden group grid grid-cols-1 grid-rows-[1.2fr_1fr] md:grid-rows-[1fr] md:grid-cols-[.5fr_1fr] gap-5 hover:scale-102 transition ease staggerRight"
             >
               <div
-                class="bg-cover bg-center"
+                class="bg-cover bg-center group-hover:scale-110 transition ease"
                 style="
                   background-image: url(&quot;assets/images/blogs/cover-90.png&quot;);
                 "
@@ -466,6 +466,197 @@
         </div>
       </div>
       <!-- blog_wrapper -->
+
+      <!-- recommended_blogs -->
+      <div
+        class="recommended_blogs px-[25px] grid grid-cols-1 grid-rows-[50px_1fr]"
+      >
+        <div class="flex items-center">
+          <h3 class="secondary-font font-bold text-[var(--secondary-color)]">
+            MORE INSIGHTS
+          </h3>
+        </div>
+        <!-- recommended_blogs_wrapper-->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr] gap-5">
+          <!-- recommended_blog -->
+          <div class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font">
+            <div
+              class="bg-cover bg-center rounded-sm"
+              style="
+                background-image: url(&quot;assets/images/blogs/cover-95.png&quot;);
+              "
+            ></div>
+            <div
+              class="grid grid-cols-1 grid-rows-[.2fr_.3fr_.5fr] md:grid-rows-[.5fr_1fr_.5fr] 2xl:grid-rows-[.2fr_.5fr_.5fr]"
+            >
+              <div class="flex items-center">
+                <p class="text-base font-bold secondary-font 2xl:text-xl">
+                  UX AS A BUSINESS, NOT JUST A STRATEGY
+                </p>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm font-regular 2xl:text-lg">
+                  Turn design into your biggest revenue driver. Learn why
+                  strategic UX outperforms tactical design and how Phenomenon
+                  Studio delivers measurable ROI.
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pb-2">
+                <div class="creator w-64 h-full flex items-center gap-2">
+                  <span
+                    class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
+                    >M</span
+                  >
+                  <p class="text-xs 2xl:text-base">Mork N' Means</p>
+                </div>
+
+                <a
+                  href=""
+                  class="p-3 2xl:p-4 2xl:text-sm text-xs bg-black rounded-sm text-white text-center w-32"
+                  >READ BLOG</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- recommended_blog -->
+
+          <!-- recommended_blog -->
+          <div class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font">
+            <div
+              class="bg-cover bg-center rounded-sm"
+              style="
+                background-image: url(&quot;assets/images/blogs/cover-94.png&quot;);
+              "
+            ></div>
+            <div
+              class="grid grid-cols-1 grid-rows-[.2fr_.3fr_.5fr] md:grid-rows-[.5fr_1fr_.5fr] 2xl:grid-rows-[.2fr_.5fr_.5fr]"
+            >
+              <div class="flex items-center">
+                <p class="text-base font-bold secondary-font 2xl:text-xl">
+                  UX AS A BUSINESS, NOT JUST A STRATEGY
+                </p>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm font-regular 2xl:text-lg">
+                  Turn design into your biggest revenue driver. Learn why
+                  strategic UX outperforms tactical design and how Phenomenon
+                  Studio delivers measurable ROI.
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pb-2">
+                <div class="creator w-64 h-full flex items-center gap-2">
+                  <span
+                    class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
+                    >M</span
+                  >
+                  <p class="text-xs 2xl:text-base">Mork N' Means</p>
+                </div>
+
+                <a
+                  href=""
+                  class="p-3 2xl:p-4 2xl:text-sm text-xs bg-black rounded-sm text-white text-center w-32"
+                  >READ BLOG</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- recommended_blog -->
+
+          <!-- recommended_blog -->
+          <div class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font">
+            <div
+              class="bg-cover bg-center rounded-sm"
+              style="
+                background-image: url(&quot;assets/images/blogs/cover-91.png&quot;);
+              "
+            ></div>
+            <div
+              class="grid grid-cols-1 grid-rows-[.2fr_.3fr_.5fr] md:grid-rows-[.5fr_1fr_.5fr] 2xl:grid-rows-[.2fr_.5fr_.5fr]"
+            >
+              <div class="flex items-center">
+                <p class="text-base font-bold secondary-font 2xl:text-xl">
+                  UX AS A BUSINESS, NOT JUST A STRATEGY
+                </p>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm font-regular 2xl:text-lg">
+                  Turn design into your biggest revenue driver. Learn why
+                  strategic UX outperforms tactical design and how Phenomenon
+                  Studio delivers measurable ROI.
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pb-2">
+                <div class="creator w-64 h-full flex items-center gap-2">
+                  <span
+                    class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
+                    >M</span
+                  >
+                  <p class="text-xs 2xl:text-base">Mork N' Means</p>
+                </div>
+
+                <a
+                  href=""
+                  class="p-3 2xl:p-4 2xl:text-sm text-xs bg-black rounded-sm text-white text-center w-32"
+                  >READ BLOG</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- recommended_blog -->
+
+          <!-- recommended_blog -->
+          <div class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font">
+            <div
+              class="bg-cover bg-center rounded-sm"
+              style="
+                background-image: url(&quot;assets/images/blogs/cover-96.png&quot;);
+              "
+            ></div>
+            <div
+              class="grid grid-cols-1 grid-rows-[.2fr_.3fr_.5fr] md:grid-rows-[.5fr_1fr_.5fr] 2xl:grid-rows-[.2fr_.5fr_.5fr]"
+            >
+              <div class="flex items-center">
+                <p class="text-base font-bold secondary-font 2xl:text-xl">
+                  UX AS A BUSINESS, NOT JUST A STRATEGY
+                </p>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm font-regular 2xl:text-lg">
+                  Turn design into your biggest revenue driver. Learn why
+                  strategic UX outperforms tactical design and how Phenomenon
+                  Studio delivers measurable ROI.
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pb-2">
+                <div class="creator w-64 h-full flex items-center gap-2">
+                  <span
+                    class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
+                    >M</span
+                  >
+                  <p class="text-xs 2xl:text-base">Mork N' Means</p>
+                </div>
+
+                <a
+                  href=""
+                  class="p-3 2xl:p-4 2xl:text-sm text-xs bg-black rounded-sm text-white text-center w-32"
+                  >READ BLOG</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- recommended_blog -->
+        </div>
+        <!-- recommended_blogs_wrapper-->
+      </div>
+      <!-- recommended_blogs -->
 
       <!-- pagination -->
       <div class="flex items-center justify-center">
