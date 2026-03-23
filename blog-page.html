@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/app.css" />
     <title>NexaNode - Blogs</title>
   </head>
-  <body class="flex justify-center relative">
+  <body class="flex justify-center relative overflow-x-hidden">
     <!-- navbar -->
     <div
       class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] lg:"
@@ -164,7 +164,9 @@
         >
           <!-- title -->
           <div class="title flex items-center">
-            <p class="font-bold text-xl md:text-3xl lg:text-4xl secondary-font">
+            <p
+              class="font-bold text-xl md:text-3xl lg:text-4xl secondary-font slide-right"
+            >
               Website Design for Growing Companies: When a Redesign Actually
               Makes Sense
             </p>
@@ -266,7 +268,7 @@
           >
             <!-- recommended_blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font"
+              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font slide-left"
             >
               <div
                 class="bg-cover bg-center rounded-sm"
@@ -312,7 +314,7 @@
 
             <!-- recommended_blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font"
+              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font slide-left"
             >
               <div
                 class="bg-cover bg-center rounded-sm"
@@ -360,7 +362,7 @@
 
             <!-- recommended_blog -->
             <div
-              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font"
+              class="grid grid-cols-1 grid-rows-[1fr_1fr] gap-2 primary-font slide-left"
             >
               <div
                 class="bg-cover bg-center rounded-sm"
@@ -425,5 +427,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
     <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/blog.js"></script>
   </body>
 </html>
