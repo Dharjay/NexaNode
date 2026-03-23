@@ -22,7 +22,7 @@
   <body class="flex justify-center relative">
     <!-- navbar -->
     <div
-      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] lg:px-5"
+      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] lg:"
     >
       <div class="navbar-start">
         <div class="dropdown">
@@ -134,10 +134,10 @@
 
     <!-- blog_wrapper -->
     <div
-      class="blog_wrapper w-full max-w-[1920px] grid grid-cols-1 grid-rows-[80px_150px_300px_1fr_100px] lg:grid-rows-[50px_.1fr_500px_1fr_100px] gap-y-4 lg:gap-y-0 lg:gap-4 mt-[100px] lg:mt-[115px]"
+      class="blog_wrapper w-full max-w-[1920px] grid grid-cols-1 grid-rows-[80px_300px_1fr_100px] lg:grid-rows-[50px_500px_1fr_100px] gap-y-4 lg:gap-y-0 lg:gap-4 mt-[100px] lg:mt-[115px] px-5"
     >
       <!-- blog-title -->
-      <div class="flex items-center text-sm lg:text-base 2xl:text-xl px-5">
+      <div class="flex items-center text-sm lg:text-base 2xl:text-xl">
         <h2 class="primary-font font-medium">
           <a href="blogs.html" class="text-gray-700">Blog &nbsp; ></a> &nbsp;
           <span class="font-semibold">Frontend Architecture & Web Design</span>
@@ -145,48 +145,46 @@
       </div>
       <!-- blog-title -->
 
-      <!-- blog-header -->
-      <div class="blog-header px-5">
-        <!-- title -->
-        <div class="title flex items-center">
-          <p class="font-bold text-xl lg:text-5xl 2xl:text-6xl secondary-font">
-            Website Design for Growing Companies: When a Redesign Actually Makes
-            Sense
-          </p>
-        </div>
-        <!-- title -->
-
-        <!-- publisher -->
-        <div class="publisher flex items-center">
-          <div class="h-15 lg:w-1/2 flex items-center gap-2">
-            <span
-              class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
-              >M</span
-            >
-            <p class="text-xs lg:text-base font-semibold">Mork N' Means</p>
-            <span class="font-bold text-2xl">·</span>
-            <p class="text-xs lg:text-base">March 2, 2026</p>
-          </div>
-        </div>
-        <!-- publisher -->
-      </div>
-      <!-- blog-header -->
-
       <!-- blog-image -->
-      <div class="blog-image bg-gray-300 bg-cover bg-center">
+      <div class="blog-image">
         <img
           src="assets/images/blogs/cover-96.png"
           alt=""
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover rounded-xl"
         />
       </div>
       <!-- blog-image -->
 
       <!-- blog -->
       <div
-        class="mt-5 blog gap-y-5 lg:gap-5 px-5 primary-font grid grid-cols-1 lg:grid-cols-4"
+        class="mt-5 blog gap-y-5 lg:gap-5 primary-font grid grid-cols-1 lg:grid-cols-4 lg:px-15"
       >
-        <div class="lg:col-span-3 grid grid-cols-1 auto-rows-[1fr] gap-2">
+        <div
+          class="lg:col-span-3 grid grid-cols-1 grid-rows-[.1fr_50px_1fr] gap-2"
+        >
+          <!-- title -->
+          <div class="title flex items-center">
+            <p class="font-bold text-xl md:text-3xl lg:text-4xl secondary-font">
+              Website Design for Growing Companies: When a Redesign Actually
+              Makes Sense
+            </p>
+          </div>
+          <!-- title -->
+
+          <!-- publisher -->
+          <div class="publisher flex items-center">
+            <div class="h-15 lg:w-1/2 flex items-center gap-2">
+              <span
+                class="bg-black text-white rounded-full aspect-square w-[30px] 2xl:w-[40px] flex items-center justify-center"
+                >M</span
+              >
+              <p class="text-xs lg:text-base font-semibold">Mork N' Means</p>
+              <span class="font-bold text-2xl">·</span>
+              <p class="text-xs lg:text-base">March 2, 2026</p>
+            </div>
+          </div>
+          <!-- publisher -->
+
           <!-- content -->
           <div class="content text-base 2xl:text-xl">
             As your company scales, your website often becomes the first thing
