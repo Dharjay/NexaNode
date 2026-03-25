@@ -133,7 +133,7 @@
     <!-- navbar -->
 
     <div
-      class="w-full max-w-[1920px] grid grid-cols-1 gap-[20px] grid-rows-[.1fr_2fr_1.3fr_.1fr_.2fr] md:grid-rows-[.1fr_2fr_1.3fr_.1fr_.2fr] pt-[140px] lg:grid-rows-[.1fr_1fr_.5fr_.1fr_.2fr] 2xl:grid-rows-[.1fr_5fr_2.6fr_.1fr_.2fr] md:pt-[150px]"
+      class="w-full max-w-[1920px] grid grid-cols-1 grid-rows-[.1fr_2fr_1.3fr_.1fr_.2fr_.2fr] md:grid-rows-[.1fr_2fr_1.3fr_.1fr_.3fr_.3fr] pt-[140px] lg:grid-rows-[.1fr_1fr_.5fr_.1fr_.3fr] 2xl:grid-rows-[.1fr_5fr_2.6fr_.5fr_1fr] md:pt-[150px]"
     >
       <!-- header -->
       <div
@@ -671,6 +671,40 @@
       </div>
       <!-- pagination -->
 
+      <!-- SUBSCRIPTION -->
+      <div class="bg-[#080d10] px-7">
+        <div class="grid md:grid-cols-2 auto-rows-[1fr] h-full">
+          <div class="flex flex-col justify-center gap-5">
+            <p class="text-white secondary-font font-bold text-lg lg:text-2xl">
+              Subscribe to our Blog
+            </p>
+            <p class="text-white text-sm primary-font">
+              Subscribe to our blog to stay updated with the latest insights,
+              tips, and industry trends. Get valuable content, helpful
+              resources, and fresh ideas delivered straight to you—so you never
+              miss an update.
+            </p>
+
+            <div class="flex items-center">
+              <input
+                type="email"
+                class="w-full md:w-6/9 h-full pl-3 outline-0 bg-white text-sm"
+                placeholder="Enter your email here"
+              />
+              <button
+                class="primary-font p-3 2xl:p-4 2xl:text-sm text-xs font-bold bg-[var(--secondary-color)] text-white text-center w-32"
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center justify-center">
+            <img src="assets/images/nexa.png" class="w-6/9 2xl:w-4/9" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- SUBSCRIPTION -->
+
       <!-- footer -->
       <div
         class="bg-[#080d10] text-neutral-content primary-font flex items-end justify-center"
@@ -694,17 +728,29 @@
               <h6 class="footer-title secondary-font 2xl:text-lg">
                 Explore our Website
               </h6>
-              <a class="link link-hover 2xl:text-base">Home</a>
-              <a class="link link-hover 2xl:text-base">Blogs</a>
+              <a class="link link-hover 2xl:text-base" href="index.html"
+                >Home</a
+              >
+              <a class="link link-hover 2xl:text-base" href="blogs.html"
+                >Blogs</a
+              >
               <a class="link link-hover 2xl:text-base">Projects</a>
             </nav>
             <nav>
               <h6 class="footer-title secondary-font 2xl:text-lg">
                 Contacts & Services
               </h6>
-              <a class="link link-hover 2xl:text-base">Inquiries</a>
+              <a
+                class="link link-hover 2xl:text-base"
+                href="index.html#contact-section"
+                >Inquiries</a
+              >
               <a class="link link-hover 2xl:text-base">Contact</a>
-              <a class="link link-hover 2xl:text-base">Services</a>
+              <a
+                class="link link-hover 2xl:text-base"
+                href="index.html#service-section"
+                >Services</a
+              >
             </nav>
             <nav>
               <h6 class="footer-title secondary-font 2xl:text-lg">Legal</h6>
