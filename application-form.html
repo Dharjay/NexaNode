@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <title>NexaNode - Form</title>
+  </head>
+  <body class="flex justify-center overflow-x-hidden">
+    <!-- navbar -->
+    <div
+      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] lg:px-5"
+    >
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-[#080d10] z-1 shadow w-screen h-screen left-0 fixed pt-[80px] px-[25px]"
+          >
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#service-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >SERVICES</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#offer-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >OFFERS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#insight-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >INSIGHTS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href=""
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >PROJECTS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <details>
+                <summary
+                  class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >
+                  ABOUT US
+                </summary>
+                <ul class="primary-font font-bold">
+                  <li class="py-[20px]">
+                    <a class="text-[18px]" href="blogs.html">BLOGS</a>
+                  </li>
+                  <li class="py-[20px]">
+                    <a class="text-[18px]">ABOUT NEXANODE</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li class="mt-[30px]">
+              <a
+                href="application-form.html"
+                class="bg-white text-black font-bold text-sm font-[Inter] rounded-sm p-[15px] w-[150px] text-center"
+              >
+                GET IN TOUCH ->
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="index.html#hero-section">
+          <img src="assets/images/nexa.png" alt="" class="w-[80%] sm:w-1/2" />
+        </a>
+      </div>
+      <div class="navbar-center hidden lg:flex secondary-font">
+        <ul class="menu menu-horizontal px-1 gap-[60px] text-base">
+          <li><a href="index.html#service-section">SERVICES</a></li>
+          <li><a href="index.html#offer-section">OFFERS</a></li>
+          <li><a href="index.html#insight-section">INSIGHTS</a></li>
+          <li><a href="">PROJECTS</a></li>
+          <li>
+            <details>
+              <summary class="">ABOUT US</summary>
+              <ul class="p-2 w-40 z-1 bg-[#1b2023] w-[200px]">
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a>About NexaNode</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a
+          href="application-form.html"
+          class="hidden lg:block lg:w-[150px] rounded-sm text-sm font-[Inter] bg-white text-black font-bold p-[15px]"
+          >GET IN TOUCH -></a
+        >
+      </div>
+    </div>
+    <!-- navbar -->
+
+    <div
+      class="h-screen w-full max-w-[1920px] mt-[120px] md:mt-[120px] grid grid-cols-1 grid-rows-[1fr_.2fr]"
+    >
+      <div
+        class="px-7 grid grid-cols-1 grid-rows-[100px_1fr] lg:grid-rows-[.1fr_1fr] mb-10"
+      >
+        <div class="flex flex-col justify-center">
+          <h4
+            class="text-[#3f3e4d] secondary-font font-bold mb-1 scramble-text"
+          >
+            Contact Us
+          </h4>
+          <h1
+            class="slide-right font-semibold w-full md:w-1/2 text-[27px] lg:text-[50px] leading-[60px] mb-2 2xl:text-[55px] secondary-font"
+          >
+            Have a project in mind? Let's chat
+          </h1>
+        </div>
+
+        <!-- info wrapper -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[1fr_.5fr] primary-font border-t-0 md:border-t border-[var(--secondary-color)]"
+        >
+          <form
+            id="inquiry-form"
+            method="POST"
+            enctype="multipart/form-data"
+            class="flex items-center justify-center border-r-0 lg:border-r-1"
+          >
+            <div
+              class="container w-full h-full md:w-5/6 h-3/4 grid grid-rows-[.7fr_.7fr_.8fr_.6fr_.4fr_.2fr] md:grid-rows-[.9fr_1fr_.8fr_.7fr_.3fr_.2fr] grid-cols-1 gap-8 pt-5"
+            >
+              <!-- BASIC INFORMATION -->
+              <div class="grid grid-cols-1 grid-rows-[.1fr_1fr]">
+                <div class="flex items-center">
+                  <p class="text-lg md:text-xl font-bold secondary-font">
+                    Basic Information
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 auto-rows-[1fr] gap-2"
+                >
+                  <!-- NAME -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        TELL US YOUR NAME
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="fullname_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- NAME -->
+
+                  <!-- PHONE NUMBER -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        PHONE NUMBER (OPTIONAL)
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="phone_number"
+                        name="phone_number"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="phone_number_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- PHONE NUMBER -->
+
+                  <!-- EMAIL ADDRESS -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        EMAIL ADDRESS
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="email_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- EMAIL ADDRESS -->
+
+                  <!-- COMPANY NAME -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        COMPANY NAME
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="company_name"
+                        name="company_name"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="company_name_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- COMPANY NAME -->
+
+                  <!-- WEBSITE URL -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        WEBSITE URL (OPTIONAL)
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="url"
+                        id="website_url"
+                        name="website_url"
+                        placeholder="https://"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="website_url_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- WEBSITE URL -->
+                </div>
+              </div>
+              <!-- BASIC INFORMATION -->
+
+              <!-- PROJECT DETAILS-->
+              <div class="grid grid-cols-1 grid-rows-[.1fr_1fr]">
+                <div class="flex items-center">
+                  <p class="text-lg md:text-xl font-bold secondary-font">
+                    Project Details
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 auto-rows-[1fr] gap-2"
+                >
+                  <!-- TYPES OF SERVICE NEEDED -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        TYPES OF SERVICE NEEDED
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <select
+                        id="service_types"
+                        name="service_types"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      >
+                        <option value="">-- Select --</option>
+                        <option value="WEB DEVELOPMENT">Web Development</option>
+                        <option value="WEB DESIGN">Web Design</option>
+                        <option value="WEB REDESIGN">Web Redesign</option>
+                        <option value="SYSTEM APPLICATION">
+                          System Application
+                        </option>
+                      </select>
+                      <p
+                        id="service_types_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- TYPES OF SERVICE NEEDED -->
+
+                  <!-- PROJECT DESCRIPTION -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        PROJECT DESCRIPTION
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="description"
+                        name="description"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="description_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- PROJECT DESCRIPTION -->
+
+                  <!-- INDUSTRY / NICHE -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        INDUSTRY / NICHE
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <select
+                        id="industry_types"
+                        name="industry_types"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      >
+                        <option value="">-- Select --</option>
+                        <option value="CAFE">Cafe</option>
+                        <option value="RESTAURANT">Restaurant</option>
+                        <option value="CONVENIENCE STORE">
+                          Convenience Store
+                        </option>
+                        <option value="HEALTHCARE">Healthcare</option>
+                        <option value="E-COMMERCE">E-commerce</option>
+                      </select>
+                      <p
+                        id="industry_types_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- INDUSTRY / NICHE -->
+
+                  <!-- TARGET AUDIENCE DESCRIPTION -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        TARGET AUDIENCE DESCRIPTION
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="target_audience"
+                        name="target_audience"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                    </div>
+                  </div>
+                  <!-- TARGET AUDIENCE DESCRIPTION -->
+
+                  <!-- BUDGET -->
+                  <div
+                    class="flex flex-col justify-center secondary-font col-span-full"
+                  >
+                    <p class="font-bold tracking-[2px] text-sm mb-3">
+                      YOUR BUDGET FOR THIS PROJECT
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="budget"
+                          value="10k"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >UP TO 10K PHP</span
+                        >
+                      </label>
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="budget"
+                          value="10k-20k"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >10K-20K PHP</span
+                        >
+                      </label>
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="budget"
+                          value="20k-50k"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >20K-50K PHP</span
+                        >
+                      </label>
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="budget"
+                          value="50k-100k"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >50-100K PHP</span
+                        >
+                      </label>
+                    </div>
+                    <p
+                      id="budget_error"
+                      class="text-red-500 text-xs primary-font mt-2 hidden"
+                    ></p>
+                  </div>
+                  <!-- BUDGET -->
+                </div>
+              </div>
+              <!-- PROJECT DETAILS-->
+
+              <!-- SCOPES & REQUIREMENTS -->
+              <div class="grid grid-cols-1 grid-rows-[.1fr_1fr]">
+                <div class="flex items-center">
+                  <p class="text-lg md:text-xl font-bold secondary-font">
+                    Scopes & Requirements
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 auto-rows-[1fr] gap-2"
+                >
+                  <!-- NUMBER OF PAGES NEEDED -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        NUMBER OF PAGES NEEDED
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <select
+                        id="page_count"
+                        name="page_count"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      >
+                        <option value="">-- Select --</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                      </select>
+                      <p
+                        id="page_count_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- NUMBER OF PAGES NEEDED -->
+
+                  <!-- HAVE EXISTING BRANDING? -->
+                  <div
+                    class="flex flex-col justify-center secondary-font col-span-1"
+                  >
+                    <p class="font-bold tracking-[2px] text-sm mb-3">
+                      HAVE EXISTING BRANDING?
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="has_branding"
+                          value="yes"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >YES</span
+                        >
+                      </label>
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="has_branding"
+                          value="no"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >NO</span
+                        >
+                      </label>
+                    </div>
+                    <p
+                      id="has_branding_error"
+                      class="text-red-500 text-xs primary-font mt-2 hidden"
+                    ></p>
+                  </div>
+                  <!-- HAVE EXISTING BRANDING? -->
+
+                  <!-- DO YOU HAVE ANY CONTENTS READY? -->
+                  <div
+                    class="flex flex-col justify-center secondary-font col-span-1"
+                  >
+                    <p class="font-bold tracking-[2px] text-sm mb-3">
+                      DO YOU HAVE ANY CONTENTS READY?
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="has_contents"
+                          value="yes"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >YES</span
+                        >
+                      </label>
+                      <label class="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="has_contents"
+                          value="no"
+                          class="hidden peer"
+                        />
+                        <span
+                          class="inline-block px-5 py-3 border border-[#4a4a4a] rounded-lg text-[13px] font-semibold tracking-wider peer-checked:text-white peer-checked:border-white peer-checked:bg-[#1b2023] hover:border-[#888] transition-all duration-200"
+                          >NO</span
+                        >
+                      </label>
+                    </div>
+                    <p
+                      id="has_contents_error"
+                      class="text-red-500 text-xs primary-font mt-2 hidden"
+                    ></p>
+                  </div>
+                  <!-- DO YOU HAVE ANY CONTENTS READY? -->
+
+                  <!-- PREFERRED START DATE -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        PREFERRED START DATE
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="date"
+                        id="start_date"
+                        name="start_date"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="start_date_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- PREFERRED START DATE -->
+
+                  <!-- TARGET LAUNCH DATE -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        TARGET LAUNCH DATE
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="date"
+                        id="target_date"
+                        name="target_date"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="target_date_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- TARGET LAUNCH DATE -->
+                </div>
+              </div>
+              <!-- SCOPES & REQUIREMENTS -->
+
+              <!-- COMMUNICATION PREFERENCES-->
+              <div class="grid grid-cols-1 grid-rows-[.1fr_1fr]">
+                <div class="flex items-center">
+                  <p class="text-lg md:text-xl font-bold secondary-font">
+                    Communication Preferences
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 auto-rows-[1fr] gap-2"
+                >
+                  <!-- PREFERRED CONTACT METHOD -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        PREFERRED CONTACT METHOD
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <select
+                        id="contact_method"
+                        name="contact_method"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      >
+                        <option value="">-- Select --</option>
+                        <option value="Google Meet">Google Meet</option>
+                        <option value="Zoom">Zoom</option>
+                        <option value="Telegram">Telegram</option>
+                      </select>
+                      <p
+                        id="contact_method_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- PREFERRED CONTACT METHOD -->
+
+                  <!-- BEST TIME TO REACH YOU -->
+                  <div
+                    class="col-span-full grid grid-cols-1 grid-rows-[1fr_1fr]"
+                  >
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        BEST TIME TO REACH YOU
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <select
+                        id="preferred_time"
+                        name="preferred_time"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      >
+                        <option value="">-- Select --</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                      </select>
+                      <p
+                        id="preferred_time_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- BEST TIME TO REACH YOU -->
+
+                  <!-- HOW DID YOU HEAR ABOUT US? -->
+                  <div class="col-span-1 grid grid-cols-1 grid-rows-[1fr_1fr]">
+                    <div class="flex items-center">
+                      <p class="font-bold secondary-font text-sm">
+                        HOW DID YOU HEAR ABOUT US?
+                      </p>
+                    </div>
+                    <div class="relative flex flex-col">
+                      <input
+                        type="text"
+                        id="survey"
+                        name="survey"
+                        class="h-full w-full pl-2 outline-none border-0 border-b border-[#3F3E3E] rounded-none bg-transparent"
+                      />
+                      <p
+                        id="survey_error"
+                        class="absolute -bottom-5 left-0 text-red-500 text-xs primary-font hidden"
+                      ></p>
+                    </div>
+                  </div>
+                  <!-- HOW DID YOU HEAR ABOUT US? -->
+                </div>
+              </div>
+              <!-- COMMUNICATION PREFERENCES-->
+
+              <!-- FILE ATTACHMENTS -->
+              <div class="grid grid-cols-1 grid-rows-[.1fr_1fr] gap-3">
+                <div class="flex items-center">
+                  <p class="text-lg md:text-xl font-bold secondary-font">
+                    File Attachments
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 auto-rows-[1fr] gap-2"
+                >
+                  <!-- REFERENCE FILES -->
+                  <div class="grid grid-cols-1 grid-rows-[.1fr_1fr] gap-3">
+                    <div class="flex items-center">
+                      <p class="text-sm font-bold secondary-color">
+                        UPLOAD REFERENCE FILES
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <input
+                        type="file"
+                        id="file-input"
+                        name="reference_files[]"
+                        multiple
+                        accept=".jpg,.jpeg,.png,.pdf,.zip,.docx"
+                        class="hidden"
+                      />
+                      <button
+                        type="button"
+                        onclick="reference_files.showModal()"
+                        class="btn bg-[#1b2023] text-white p-6 rounded-md text-xs w-[150px]"
+                      >
+                        ATTACH FILES
+                      </button>
+                      <dialog id="reference_files" class="modal">
+                        <div
+                          class="modal-box bg-white text-black max-w-2xl rounded-xl border border-black/10"
+                        >
+                          <form method="dialog">
+                            <button
+                              type="button"
+                              onclick="reference_files.close()"
+                              class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3 text-black hover:bg-black/10"
+                            >
+                              ✕
+                            </button>
+                          </form>
+                          <h3
+                            class="text-lg md:text-xl font-bold secondary-font mb-1"
+                          >
+                            Upload Reference Files
+                          </h3>
+                          <p class="text-sm primary-font mb-6">
+                            Attach any files that may help us understand your
+                            project better.
+                          </p>
+                          <div
+                            id="drop-zone"
+                            class="border-2 border-dashed border-black/20 rounded-xl p-10 flex flex-col items-center justify-center gap-3 cursor-pointer hover:border-black/50 hover:bg-black/5 transition-all duration-300"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-10 h-10 text-black/40"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                              />
+                            </svg>
+                            <p class="text-sm primary-font text-center">
+                              Drag & drop files here or
+                              <span class="text-black font-semibold underline"
+                                >browse</span
+                              >
+                            </p>
+                            <p class="text-black/30 text-xs primary-font">
+                              Supports: JPG, PNG, PDF, ZIP, DOCX (max 10MB each)
+                            </p>
+                          </div>
+                          <div
+                            id="file-list"
+                            class="mt-4 flex flex-col gap-2 max-h-48 overflow-y-auto pr-1"
+                          ></div>
+                          <div class="mt-6 flex justify-end">
+                            <form method="dialog">
+                              <button
+                                type="submit"
+                                class="btn text-white hover:opacity-90 rounded-sm primary-font px-6"
+                                style="background-color: #1b2023"
+                              >
+                                Done
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                        <form method="dialog" class="modal-backdrop">
+                          <button>close</button>
+                        </form>
+                      </dialog>
+                    </div>
+                  </div>
+                  <!-- REFERENCE FILES -->
+
+                  <!-- EXISTING ASSETS -->
+                  <div class="grid grid-cols-1 grid-rows-[.1fr_1fr] gap-3">
+                    <div class="flex items-center">
+                      <p class="text-sm font-bold secondary-color">
+                        UPLOAD EXISTING ASSETS
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <input
+                        type="file"
+                        id="assets-input"
+                        name="existing_assets[]"
+                        multiple
+                        accept=".jpg,.jpeg,.png,.svg,.pdf,.ai,.zip,.fig"
+                        class="hidden"
+                      />
+                      <button
+                        type="button"
+                        onclick="file_assets.showModal()"
+                        class="btn bg-[#1b2023] text-white p-6 rounded-md text-xs w-[150px]"
+                      >
+                        ATTACH ASSETS
+                      </button>
+                      <dialog id="file_assets" class="modal">
+                        <div
+                          class="modal-box bg-white text-black max-w-2xl rounded-xl"
+                        >
+                          <form method="dialog">
+                            <button
+                              type="button"
+                              onclick="file_assets.close()"
+                              class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3 text-black hover:bg-black/10"
+                            >
+                              ✕
+                            </button>
+                          </form>
+                          <h3
+                            class="text-lg md:text-xl font-bold secondary-font mb-1"
+                          >
+                            Upload Existing Assets
+                          </h3>
+                          <p class="text-sm primary-font mb-6">
+                            Upload your brand assets such as logos, style
+                            guides, or any existing design files.
+                          </p>
+                          <div
+                            id="assets-drop-zone"
+                            class="border-2 border-dashed border-black/20 rounded-xl p-10 flex flex-col items-center justify-center gap-3 cursor-pointer hover:border-black/50 hover:bg-black/5 transition-all duration-300"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-10 h-10 text-black/40"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                              />
+                            </svg>
+                            <p class="text-sm primary-font text-center">
+                              Drag & drop assets here or
+                              <span class="text-black font-semibold underline"
+                                >browse</span
+                              >
+                            </p>
+                            <p class="text-black/30 text-xs primary-font">
+                              Supports: JPG, PNG, SVG, PDF, AI, FIGMA, ZIP (max
+                              20MB each)
+                            </p>
+                          </div>
+                          <div
+                            id="assets-list"
+                            class="mt-4 flex flex-col gap-2 max-h-48 overflow-y-auto pr-1"
+                          ></div>
+                          <div class="mt-6 flex justify-end">
+                            <form method="dialog">
+                              <button
+                                type="submit"
+                                class="btn text-white hover:opacity-90 rounded-sm primary-font px-6"
+                                style="background-color: #1b2023"
+                              >
+                                Done
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                        <form method="dialog" class="modal-backdrop">
+                          <button>close</button>
+                        </form>
+                      </dialog>
+                    </div>
+                  </div>
+                  <!-- EXISTING ASSETS -->
+                </div>
+              </div>
+              <!-- FILE ATTACHMENTS -->
+
+              <!-- SUBMIT BUTTON -->
+              <div class="flex flex-col md:flex-row md:items-center gap-3">
+                <button
+                  type="submit"
+                  class="w-[180px] p-[14px] rounded-md bg-[#1B2023] text-white text-[12px] primary-font"
+                >
+                  SUBMIT ->
+                </button>
+                <p class="font-bold secondary-font text-xs md:text-[15px]">
+                  By clicking this button you accept Terms of Service and
+                  <br />
+                  Privacy Policy
+                </p>
+              </div>
+              <!-- SUBMIT BUTTON -->
+            </div>
+          </form>
+
+          <!-- profile -->
+          <div class="border-[#3F3E3E] grid grid-cols-1 auto-rows-[350px]">
+            <div class="flex items-center justify-center">
+              <!-- dp container -->
+              <div
+                class="container w-full md:w-5/6 h-full xl:xl:p-[20px] grid grid-cols-1 grid-rows-[.2fr_1fr] md:grid-rows-[.3fr_1fr] gap-[10px]"
+              >
+                <div class="flex items-center">
+                  <h1
+                    class="font-bold md:text-lg lg:text-[22px] w-full lg:w-4/5 secondary-font"
+                  >
+                    Have a Website Design to Discuss?
+                  </h1>
+                </div>
+                <div class="grid grid-cols-1 auto-rows-[100px] gap-[10px]">
+                  <!-- dp -->
+                  <div class="grid grid-cols-[100px_1fr]">
+                    <div
+                      class="bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;assets/images/profiles/dj.png&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col justify-center primary-font pl-[10px]"
+                    >
+                      <h1 class="font-bold text-md lg:text-[18px]">
+                        Dharjay Escarlan
+                      </h1>
+                      <h4 class="font-regular text-[#3f3e4d] text-[15px]">
+                        Front End Developer
+                      </h4>
+                      <h4
+                        class="font-bold text-xs md:text-[15px] underline underline-offset-4"
+                      >
+                        dharjayescarlan@gmail.com
+                      </h4>
+                    </div>
+                  </div>
+                  <!-- dp -->
+
+                  <!-- dp -->
+                  <div class="grid grid-cols-[100px_1fr]">
+                    <div
+                      class="bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;assets/images/profiles/rj.png&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col justify-center primary-font pl-[10px]"
+                    >
+                      <h1 class="font-bold text-[18px]">R-jay Opiana</h1>
+                      <h4 class="font-regular text-[#3f3e4d] text-[15px]">
+                        UI / UX Designer
+                      </h4>
+                      <h4
+                        class="font-bold text-xs md:text-[15px] underline underline-offset-4"
+                      >
+                        opianarjay@gmail.com
+                      </h4>
+                    </div>
+                  </div>
+                  <!-- dp -->
+                </div>
+              </div>
+              <!-- dp container -->
+            </div>
+            <div
+              class="flex items-center justify-center border-t-1 border-[var(--secondary-color)]"
+            >
+              <!-- dp container -->
+              <div
+                class="container w-full md:w-5/6 h-full xl:p-[20px] grid grid-cols-1 grid-rows-[.2fr_1fr] md:grid-rows-[.3fr_1fr] gap-[10px]"
+              >
+                <div class="flex items-center">
+                  <h1
+                    class="font-bold md:text-lg lg:text-[22px] w-full lg:w-4/5 secondary-font"
+                  >
+                    Have a Concepts in mind?
+                  </h1>
+                </div>
+                <div class="grid grid-cols-1 auto-rows-[100px] gap-[10px]">
+                  <!-- dp -->
+                  <div class="grid grid-cols-[100px_1fr]">
+                    <div
+                      class="bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;assets/images/profiles/jericho.png&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col justify-center primary-font pl-[10px]"
+                    >
+                      <h1 class="font-bold text-[18px]">Jericho Umayam</h1>
+                      <h4 class="font-regular text-[#3f3e4d] text-[15px]">
+                        Back End Developer
+                      </h4>
+                      <h4
+                        class="font-bold text-xs md:text-[15px] underline underline-offset-4"
+                      >
+                        jerichoumayam@gmail.com
+                      </h4>
+                    </div>
+                  </div>
+                  <!-- dp -->
+
+                  <!-- dp -->
+                  <div class="grid grid-cols-[100px_1fr]">
+                    <div
+                      class="bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;assets/images/profiles/jose.png&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col justify-center primary-font pl-[10px]"
+                    >
+                      <h1 class="font-bold text-[18px]">
+                        Jose Valerie Dalanon
+                      </h1>
+                      <h4 class="font-regular text-[#3f3e4d] text-[15px]">
+                        Back End Developer
+                      </h4>
+                      <h4
+                        class="font-bold text-xs md:text-[15px] underline underline-offset-4"
+                      >
+                        josedalanon@gmail.com
+                      </h4>
+                    </div>
+                  </div>
+                  <!-- dp -->
+                </div>
+              </div>
+              <!-- dp container -->
+            </div>
+          </div>
+          <!-- profile -->
+        </div>
+        <!-- info wrapper -->
+      </div>
+
+      <!-- footer -->
+      <div
+        class="bg-[#080d10] text-neutral-content primary-font flex items-end justify-center"
+      >
+        <div class="w-full">
+          <!-- Main Footer -->
+          <footer class="footer sm:footer-horizontal p-10">
+            <aside>
+              <img
+                src="assets/images/NEXALOGO.png"
+                class="w-[100px] 2xl:w-[130px]"
+                alt=""
+              />
+              <p class="2xl:text-lg">
+                NexaNode Dev Company.
+                <br />
+                Providing Reliable Tech Since 2025
+              </p>
+            </aside>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">
+                Explore our Website
+              </h6>
+              <a class="link link-hover 2xl:text-base">Home</a>
+              <a class="link link-hover 2xl:text-base">Blogs</a>
+              <a class="link link-hover 2xl:text-base">Projects</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">
+                Contacts & Services
+              </h6>
+              <a class="link link-hover 2xl:text-base">Inquiries</a>
+              <a class="link link-hover 2xl:text-base">Contact</a>
+              <a class="link link-hover 2xl:text-base">Services</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">Legal</h6>
+              <a class="link link-hover 2xl:text-base">Terms of use</a>
+              <a class="link link-hover 2xl:text-base">Privacy policy</a>
+              <a class="link link-hover 2xl:text-base">Cookie policy</a>
+            </nav>
+          </footer>
+
+          <!-- Divider -->
+          <div class="border-t border-neutral-content/20 mx-10"></div>
+
+          <!-- Copyright Bar -->
+          <footer class="footer sm:footer-horizontal items-center p-4 px-10">
+            <aside class="grid-flow-col items-center">
+              <p class="2xl:text-base">© NexaNode - All right reserved</p>
+            </aside>
+            <nav
+              class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+            >
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  ></path>
+                </svg>
+              </a>
+            </nav>
+          </footer>
+        </div>
+      </div>
+      <!-- footer -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/validations.js"></script>
+  </body>
+</html>
