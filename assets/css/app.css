@@ -6,6 +6,7 @@ body {
 
 :root {
   --secondary-color: #3f3e3e;
+  --primary-font: inter;
 }
 
 html::-webkit-scrollbar,
@@ -36,8 +37,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-button {
+button,
+a,
+input {
   cursor: pointer;
+  font-family: var(--primary-font);
 }
 
 .staggerRight {

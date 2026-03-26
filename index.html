@@ -20,6 +20,152 @@
     <title>NexaNode</title>
   </head>
   <body class="flex justify-center overflow-x-hidden">
+    <!-- fab -->
+    <div class="fab fab-flower fixed bottom-5 right-5 z-50">
+      <!-- FAB Trigger -->
+      <div
+        tabindex="0"
+        role="button"
+        class="btn btn-lg btn-circle border-0 btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </div>
+
+      <!-- Main Action (shows when open) -->
+      <button
+        class="fab-main-action btn btn-circle btn-lg border-0 bg-white text-black hover:bg-white/90"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- FAQs -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+        data-tip="FAQs"
+        onclick="window.location.href = '#faq'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Customer Service -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+        data-tip="Customer Service"
+        onclick="window.location.href = '#contact-section'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Logout -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 tooltip tooltip-left"
+        data-tip="Logout"
+        onclick="document.getElementById('logout-confirm').showModal()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- fab -->
+
+    <!-- Logout Confirm Modal -->
+    <dialog id="logout-confirm" class="modal">
+      <div
+        class="modal-box bg-[#0f1518] text-white border border-white/10 rounded-xl max-w-sm"
+      >
+        <h3 class="text-lg font-bold secondary-font mb-1">Logging out?</h3>
+        <p class="text-sm text-white/50 primary-font mb-6">
+          You'll need to sign in again to access your account.
+        </p>
+        <div class="flex justify-end gap-3">
+          <form method="dialog">
+            <button
+              type="button"
+              onclick="logout_confirm.close()"
+              class="btn btn-ghost text-white/50 hover:text-white hover:bg-white/10 rounded-sm primary-font"
+            >
+              Cancel
+            </button>
+          </form>
+          <form method="POST" action="/logout">
+            <!-- @csrf -->
+            <button
+              type="submit"
+              class="btn bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 rounded-sm primary-font"
+            >
+              Yes, Logout
+            </button>
+          </form>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <!-- Logout Confirm Modal -->
+
     <!-- loader -->
     <div
       id="loader"
@@ -152,7 +298,7 @@
     <!-- navbar -->
 
     <div
-      class="w-full max-w-[1920px] grid grid-cols-1 grid-rows-[768px_.5fr_.5fr_1fr_.7fr_.8fr_.3fr] md:grid-rows-[768px_.6fr_1.5fr_1fr_.8fr_.5fr_.3fr] 2xl:grid-rows-[1fr_.7fr_1.8fr_1.4fr_1fr_.8fr_.4fr]"
+      class="bg-[#080d10] w-full max-w-[1920px] grid grid-cols-1 grid-rows-[768px_.5fr_.5fr_1fr_.7fr_.8fr_.3fr] md:grid-rows-[768px_.6fr_1.5fr_1fr_.8fr_.5fr_.3fr] 2xl:grid-rows-[1fr_.7fr_1.8fr_1.4fr_1fr_.8fr_.4fr]"
     >
       <!-- hero section -->
       <div
@@ -339,11 +485,11 @@
       <!-- services -->
       <div
         id="service-section"
-        class="px-[25px] grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.1fr_1fr] my-[50px]"
+        class="bg-white px-[25px] grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.1fr_1fr]"
       >
         <div class="flex flex-col justify-center">
           <h4
-            class="text-[#3f3e3e] secondary-font font-bold mb-1 scramble-text"
+            class="text-[#3f3e3e] secondary-font font-bold mt-4 scramble-text"
           >
             Website Design & Development Company Services
           </h4>
@@ -353,7 +499,9 @@
             Your vision deserves the right development partner.
           </h1>
         </div>
-        <div class="services grid grid-cols-1 auto-rows-[1fr] gap-y-[40px]">
+        <div
+          class="services grid grid-cols-1 auto-rows-[1fr] gap-y-[40px] mb-5"
+        >
           <!-- insights -->
           <div class="grid services-grid gap-[30px] service-cols-1">
             <div style="grid-area: col-1">
@@ -691,7 +839,7 @@
       <!-- insights -->
       <div
         id="insight-section"
-        class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.2fr_1fr] px-[25px] my-[50px]"
+        class="bg-white grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.2fr_1fr] px-[25px] my-[50px]"
       >
         <div class="flex flex-col justify-center">
           <h4
@@ -707,7 +855,7 @@
         </div>
 
         <div
-          class="card-container grid auto-rows-[1fr] gap-[20px] md:grid-cols-2 2xl:px-25"
+          class="card-container grid auto-rows-[1fr] gap-[20px] md:grid-cols-2 2xl:px-25 mb-10"
         >
           <div
             class="slide-right-card rounded-md bg-[#f5f6f6] px-[20px] flex flex-col justify-center gap-[5px] md:gap-[10px]"
