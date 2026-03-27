@@ -17,9 +17,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/overflow.css" />
+
     <title>NexaNode - Form</title>
   </head>
-  <body class="flex justify-center overflow-x-hidden">
+  <body class="flex justify-center">
     <!-- fab -->
     <div class="fab fab-flower fixed bottom-5 right-5 z-50">
       <!-- FAB Trigger -->
@@ -151,10 +153,11 @@
               Cancel
             </button>
           </form>
-          <form method="POST" action="/logout">
+          <form>
             <!-- @csrf -->
             <button
-              type="submit"
+              type="button"
+              onclick="window.location.href = 'signup.html'"
               class="btn bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 rounded-sm primary-font"
             >
               Yes, Logout
@@ -168,7 +171,7 @@
 
     <!-- navbar -->
     <div
-      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] lg:px-5"
+      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] 2xl:h-[120px] lg:px-5"
     >
       <div class="navbar-start">
         <div class="dropdown">
@@ -215,7 +218,7 @@
             </li>
             <li class="border-b border-[#3F3E3E]">
               <a
-                href=""
+                href="projects.html"
                 class="secondary-font font-bold text-white text-[18px] py-[20px]"
                 >PROJECTS</a
               >
@@ -256,7 +259,7 @@
           <li><a href="index.html#service-section">SERVICES</a></li>
           <li><a href="index.html#offer-section">OFFERS</a></li>
           <li><a href="index.html#insight-section">INSIGHTS</a></li>
-          <li><a href="">PROJECTS</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
           <li>
             <details>
               <summary class="">ABOUT US</summary>

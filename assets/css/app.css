@@ -14,11 +14,6 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 * {
   user-select: none;
   -webkit-user-select: none;

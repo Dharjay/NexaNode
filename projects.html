@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <title>NexaNode - Projects</title>
+  </head>
+  <body class="flex justify-center relative overflow-x-hidden">
+    <!-- fab -->
+    <div class="fab fab-flower fixed bottom-5 right-5 z-50">
+      <!-- FAB Trigger -->
+      <div
+        tabindex="0"
+        role="button"
+        class="btn btn-lg btn-circle border-0 btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </div>
+
+      <!-- Main Action (shows when open) -->
+      <button
+        class="fab-main-action btn btn-circle btn-lg border-0 bg-white text-black hover:bg-white/90"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- FAQs -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+        data-tip="FAQs"
+        onclick="window.location.href = '#faq'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Customer Service -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-[#1b2023] text-white border-0 hover:bg-[#1b2023]/80 tooltip tooltip-left"
+        data-tip="Customer Service"
+        onclick="window.location.href = '#contact-section'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Logout -->
+      <button
+        class="flex items-center justify-center btn btn-lg btn-circle bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 tooltip tooltip-left"
+        data-tip="Logout"
+        onclick="document.getElementById('logout-confirm').showModal()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- fab -->
+
+    <!-- Logout Confirm Modal -->
+    <dialog id="logout-confirm" class="modal">
+      <div
+        class="modal-box bg-[#0f1518] text-white border border-white/10 rounded-xl max-w-sm"
+      >
+        <h3 class="text-lg font-bold secondary-font mb-1">Logging out?</h3>
+        <p class="text-sm text-white/50 primary-font mb-6">
+          You'll need to sign in again to access your account.
+        </p>
+        <div class="flex justify-end gap-3">
+          <form method="dialog">
+            <button
+              type="button"
+              onclick="logout_confirm.close()"
+              class="btn btn-ghost text-white/50 hover:text-white hover:bg-white/10 rounded-sm primary-font"
+            >
+              Cancel
+            </button>
+          </form>
+          <form>
+            <!-- @csrf -->
+            <button
+              type="button"
+              onclick="window.location.href = 'signup.html'"
+              class="btn bg-red-500/20 text-red-400 border border-red-500/30 hover:bg-red-500/30 rounded-sm primary-font"
+            >
+              Yes, Logout
+            </button>
+          </form>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <!-- Logout Confirm Modal -->
+
+    <!-- navbar -->
+    <div
+      class="navbar bg-[#080d10] fixed top-0 z-100 max-w-[1920px] text-white h-[80px] lg:h-[100px] 2xl:h-[120px] lg:px-5"
+    >
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-[#080d10] z-1 shadow w-screen h-screen left-0 fixed pt-[80px] px-[25px]"
+          >
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#service-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >SERVICES</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#offer-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >OFFERS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="index.html#insight-section"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >INSIGHTS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <a
+                href="projects.html"
+                class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >PROJECTS</a
+              >
+            </li>
+            <li class="border-b border-[#3F3E3E]">
+              <details>
+                <summary
+                  class="secondary-font font-bold text-white text-[18px] py-[20px]"
+                >
+                  ABOUT US
+                </summary>
+                <ul class="primary-font font-bold">
+                  <li class="py-[20px]">
+                    <a class="text-[18px]" href="blogs.html">BLOGS</a>
+                  </li>
+                  <li class="py-[20px]">
+                    <a class="text-[18px]">ABOUT NEXANODE</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li class="mt-[30px]">
+              <a
+                href="application-form.html"
+                class="bg-white text-black font-bold text-sm font-[Inter] rounded-sm p-[15px] w-[150px] text-center"
+              >
+                GET IN TOUCH ->
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="index.html#hero-section">
+          <img src="assets/images/nexa.png" alt="" class="w-[80%] sm:w-1/2" />
+        </a>
+      </div>
+      <div class="navbar-center hidden lg:flex secondary-font">
+        <ul class="menu menu-horizontal px-1 gap-[60px] text-base">
+          <li><a href="index.html#service-section">SERVICES</a></li>
+          <li><a href="index.html#offer-section">OFFERS</a></li>
+          <li><a href="index.html#insight-section">INSIGHTS</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li>
+            <details>
+              <summary class="">ABOUT US</summary>
+              <ul class="p-2 w-40 z-1 bg-[#1b2023] w-[200px]">
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a>About NexaNode</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a
+          href="application-form.html"
+          class="hidden lg:block lg:w-[150px] rounded-sm text-sm font-[Inter] bg-white text-black font-bold p-[15px]"
+          >GET IN TOUCH -></a
+        >
+      </div>
+    </div>
+    <!-- navbar -->
+
+    <!-- projects_wrapper -->
+    <div
+      class="projects_wrapper w-full max-w-[1920px] grid grid-cols-1 grid-rows-[.1fr_2fr_.2fr] mt-[100px] md:mt-[150px] 2xl:mt-[180px]"
+    >
+      <!-- header -->
+      <div
+        class="blog_header flex flex-col justify-center px-[25px] gap-[20px] mb-10 lg:mb-0"
+      >
+        <h1
+          class="text-5xl md:text-7xl 2xl:text-8xl font-medium secondary-font slide-right"
+        >
+          Explore Our Projects
+        </h1>
+
+        <!-- desktop size -->
+        <div
+          class="hidden h-24 md:flex flex-wrap items-center gap-5 primary-font font-semibold"
+        >
+          <label class="cursor-pointer">
+            <input type="radio" name="category" class="hidden peer" checked />
+            <span
+              class="inline-block tracking-widest p-4 rounded-sm peer-checked:bg-black peer-checked:text-white transition ease-in duration-200 text-sm"
+              >ALL</span
+            >
+          </label>
+
+          <label class="cursor-pointer">
+            <input type="radio" name="category" class="hidden peer" />
+            <span
+              class="inline-block tracking-widest p-4 rounded-sm peer-checked:bg-black peer-checked:text-white transition ease-in duration-200 text-sm"
+              >BUSINESS & DESIGN</span
+            >
+          </label>
+
+          <label class="cursor-pointer">
+            <input type="radio" name="category" class="hidden peer" />
+            <span
+              class="inline-block tracking-widest p-4 rounded-sm peer-checked:bg-black peer-checked:text-white transition ease-in duration-200 text-sm"
+              >DEVELOPMENT</span
+            >
+          </label>
+
+          <label class="cursor-pointer">
+            <input type="radio" name="category" class="hidden peer" />
+            <span
+              class="inline-block tracking-widest p-4 rounded-sm peer-checked:bg-black peer-checked:text-white transition ease-in duration-200 text-sm"
+              >DEPLOYMENT</span
+            >
+          </label>
+        </div>
+        <!-- desktop size -->
+
+        <!-- mobile size -->
+        <select
+          name="category"
+          id="category"
+          class="border-1 border-gray-300 text-black text-sm font-medium px-4 size-16 w-full rounded-sm primary-font md:hidden tracking-widest"
+        >
+          <option value="All">ALL</option>
+          <option value="BUSINESS & DESIGN">BUSINESS & DESIGN</option>
+          <option value="DEVELOPMENT">DEVELOPMENT</option>
+          <option value="DEPLOYMENT">DEPLOYMENT</option>
+        </select>
+        <!-- mobile size -->
+      </div>
+      <!-- header -->
+
+      <!-- projects -->
+      <div class="projects px-5 flex flex-col gap-10 mb-10 primary-font">
+        <!-- project -->
+        <div class="grid lg:grid-cols-2 lg:auto-rows-[1fr] lg:gap-10 gap-5">
+          <!-- project_img -->
+          <div class="relative">
+            <div class="lg:sticky lg:top-[100px]">
+              <img
+                src="assets/images/NEXANODE_LOGO.png"
+                alt=""
+                class="w-full object-cover object-center rounded-md 2xl:rounded-lg aspect-3/2"
+              />
+            </div>
+          </div>
+          <!-- project_img -->
+
+          <div class="grid grid-cols-1 grid-rows-[1fr_.4fr_1fr] gap-4">
+            <!-- project info_wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.2fr_1fr] gap-5 md:gap-2"
+            >
+              <!-- project category -->
+              <div
+                class="flex items-center flex-wrap gap-5 uppercase text-xs 2xl:text-sm font-semibold tracking-widest text-[var(--secondary-color)] secondary-font"
+              >
+                <p>#UX Audit</p>
+                <p>#Workflow Development</p>
+                <p>#Web development</p>
+                <p>#Team Collaboration</p>
+              </div>
+              <!-- project category -->
+
+              <!-- project title -->
+              <div class="grid grid-cols-1 grid-rows-[1fr_.5fr]">
+                <div class="flex items-center">
+                  <p
+                    class="text-2xl md:text-4xl 2xl:text-5xl secondary-font font-medium"
+                  >
+                    NexaNode - Building the next generation of connected digital
+                    experiences.
+                  </p>
+                </div>
+                <!-- project title -->
+
+                <!-- project company & location -->
+                <div
+                  class="border flex items-center gap-2 text-white secondary-font text-xs 2xl:text-sm tracking-wider font-semibold"
+                >
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MARVILL WEB DEVELOPMENT
+                  </div>
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MAKATI CITY
+                  </div>
+                </div>
+                <!-- project company & location -->
+              </div>
+            </div>
+            <!-- project info_wrapper -->
+
+            <!-- tech stack wrapper -->
+            <div class="grid grid-cols-1">
+              <div class="grid gap-5 md:gap-0 lg:grid-cols-2 auto-rows-[1fr]">
+                <!-- techstack -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TECH STACK</p>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    Laravel, Filament, Tailwind CSS, HTML
+                  </div>
+                </div>
+                <!-- techstack -->
+
+                <!-- timeline -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="lg:px-5 flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TIMELINE</p>
+                  </div>
+                  <div
+                    class="lg:px-5 flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    3 Months
+                  </div>
+                </div>
+                <!-- timeline -->
+              </div>
+            </div>
+            <!-- tech stack wrapper -->
+
+            <!-- results wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] lg:grid-rows-[30px_1fr] gap-2"
+            >
+              <div
+                class="flex items-center uppercase text-xs font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+              >
+                <p>TECH STACK</p>
+              </div>
+
+              <div class="flex flex-col justify-evenly 2xl:text-xl">
+                <p>2x faster user workflows</p>
+                <p>50% shorter time-to-market</p>
+                <p>Nominated for UX Design Award 2024</p>
+
+                <a
+                  href=""
+                  class="mt-10 relative text-center w-full lg:w-32 p-4 text-white text-xs 2xl:text-sm tracking-widest font-semibold bg-black rounded-sm overflow-hidden group"
+                >
+                  <span
+                    class="absolute inset-0 bg-white rounded-sm border border-[#272727] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+                  ></span>
+                  <span
+                    class="relative z-10 group-hover:text-[#272727] transition-colors duration-300"
+                    >EXPLORE -></span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- results wrapper -->
+          </div>
+        </div>
+        <!-- project -->
+
+        <!-- project -->
+        <div class="grid lg:grid-cols-2 lg:auto-rows-[1fr] lg:gap-10 gap-5">
+          <!-- project_img -->
+          <div class="relative">
+            <div class="lg:sticky lg:top-[100px]">
+              <img
+                src="assets/images/NEXANODE_LOGO.png"
+                alt=""
+                class="w-full object-cover object-center rounded-md 2xl:rounded-lg aspect-3/2"
+              />
+            </div>
+          </div>
+          <!-- project_img -->
+
+          <div class="grid grid-cols-1 grid-rows-[1fr_.4fr_1fr] gap-4">
+            <!-- project info_wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.2fr_1fr] gap-5 md:gap-2"
+            >
+              <!-- project category -->
+              <div
+                class="flex items-center flex-wrap gap-5 uppercase text-xs 2xl:text-sm font-semibold tracking-widest text-[var(--secondary-color)] secondary-font"
+              >
+                <p>#UX Audit</p>
+                <p>#Workflow Development</p>
+                <p>#Web development</p>
+                <p>#Team Collaboration</p>
+              </div>
+              <!-- project category -->
+
+              <!-- project title -->
+              <div class="grid grid-cols-1 grid-rows-[1fr_.5fr]">
+                <div class="flex items-center">
+                  <p
+                    class="text-2xl md:text-4xl 2xl:text-5xl secondary-font font-medium"
+                  >
+                    NexaNode - Building the next generation of connected digital
+                    experiences.
+                  </p>
+                </div>
+                <!-- project title -->
+
+                <!-- project company & location -->
+                <div
+                  class="border flex items-center gap-2 text-white secondary-font text-xs 2xl:text-sm tracking-wider font-semibold"
+                >
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MARVILL WEB DEVELOPMENT
+                  </div>
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MAKATI CITY
+                  </div>
+                </div>
+                <!-- project company & location -->
+              </div>
+            </div>
+            <!-- project info_wrapper -->
+
+            <!-- tech stack wrapper -->
+            <div class="grid grid-cols-1">
+              <div class="grid gap-5 md:gap-0 lg:grid-cols-2 auto-rows-[1fr]">
+                <!-- techstack -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TECH STACK</p>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    Laravel, Filament, Tailwind CSS, HTML
+                  </div>
+                </div>
+                <!-- techstack -->
+
+                <!-- timeline -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="lg:px-5 flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TIMELINE</p>
+                  </div>
+                  <div
+                    class="lg:px-5 flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    3 Months
+                  </div>
+                </div>
+                <!-- timeline -->
+              </div>
+            </div>
+            <!-- tech stack wrapper -->
+
+            <!-- results wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] lg:grid-rows-[30px_1fr] gap-2"
+            >
+              <div
+                class="flex items-center uppercase text-xs font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+              >
+                <p>TECH STACK</p>
+              </div>
+
+              <div class="flex flex-col justify-evenly 2xl:text-xl">
+                <p>2x faster user workflows</p>
+                <p>50% shorter time-to-market</p>
+                <p>Nominated for UX Design Award 2024</p>
+
+                <a
+                  href=""
+                  class="mt-10 relative text-center w-full lg:w-32 p-4 text-white text-xs 2xl:text-sm tracking-widest font-semibold bg-black rounded-sm overflow-hidden group"
+                >
+                  <span
+                    class="absolute inset-0 bg-white rounded-sm border border-[#272727] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+                  ></span>
+                  <span
+                    class="relative z-10 group-hover:text-[#272727] transition-colors duration-300"
+                    >EXPLORE -></span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- results wrapper -->
+          </div>
+        </div>
+        <!-- project -->
+
+        <!-- project -->
+        <div class="grid lg:grid-cols-2 lg:auto-rows-[1fr] lg:gap-10 gap-5">
+          <!-- project_img -->
+          <div class="relative">
+            <div class="lg:sticky lg:top-[100px]">
+              <img
+                src="assets/images/NEXANODE_LOGO.png"
+                alt=""
+                class="w-full object-cover object-center rounded-md 2xl:rounded-lg aspect-3/2"
+              />
+            </div>
+          </div>
+          <!-- project_img -->
+
+          <div class="grid grid-cols-1 grid-rows-[1fr_.4fr_1fr] gap-4">
+            <!-- project info_wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[.2fr_1fr] gap-5 md:gap-2"
+            >
+              <!-- project category -->
+              <div
+                class="flex items-center flex-wrap gap-5 uppercase text-xs 2xl:text-sm font-semibold tracking-widest text-[var(--secondary-color)] secondary-font"
+              >
+                <p>#UX Audit</p>
+                <p>#Workflow Development</p>
+                <p>#Web development</p>
+                <p>#Team Collaboration</p>
+              </div>
+              <!-- project category -->
+
+              <!-- project title -->
+              <div class="grid grid-cols-1 grid-rows-[1fr_.5fr]">
+                <div class="flex items-center">
+                  <p
+                    class="text-2xl md:text-4xl 2xl:text-5xl secondary-font font-medium"
+                  >
+                    NexaNode - Building the next generation of connected digital
+                    experiences.
+                  </p>
+                </div>
+                <!-- project title -->
+
+                <!-- project company & location -->
+                <div
+                  class="border flex items-center gap-2 text-white secondary-font text-xs 2xl:text-sm tracking-wider font-semibold"
+                >
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MARVILL WEB DEVELOPMENT
+                  </div>
+                  <div class="p-3 bg-[#272727] rounded-sm text-center">
+                    MAKATI CITY
+                  </div>
+                </div>
+                <!-- project company & location -->
+              </div>
+            </div>
+            <!-- project info_wrapper -->
+
+            <!-- tech stack wrapper -->
+            <div class="grid grid-cols-1">
+              <div class="grid gap-5 md:gap-0 lg:grid-cols-2 auto-rows-[1fr]">
+                <!-- techstack -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TECH STACK</p>
+                  </div>
+                  <div
+                    class="flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    Laravel, Filament, Tailwind CSS, HTML
+                  </div>
+                </div>
+                <!-- techstack -->
+
+                <!-- timeline -->
+                <div
+                  class="grid grid-cols-1 grid-rows-[.1fr_1fr] md:grid-rows-[30px_1fr]"
+                >
+                  <div
+                    class="lg:px-5 flex items-center uppercase text-xs 2xl:text-sm font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+                  >
+                    <p>TIMELINE</p>
+                  </div>
+                  <div
+                    class="lg:px-5 flex flex-row gap-2 flex-wrap text-md 2xl:text-lg pt-3 lg:border-r-1 lg:border-gray-300"
+                  >
+                    3 Months
+                  </div>
+                </div>
+                <!-- timeline -->
+              </div>
+            </div>
+            <!-- tech stack wrapper -->
+
+            <!-- results wrapper -->
+            <div
+              class="grid grid-cols-1 grid-rows-[.1fr_1fr] lg:grid-rows-[30px_1fr] gap-2"
+            >
+              <div
+                class="flex items-center uppercase text-xs font-regular tracking-widest text-gray-500 secondary-font border-b-1 border-gray-300"
+              >
+                <p>TECH STACK</p>
+              </div>
+
+              <div class="flex flex-col justify-evenly 2xl:text-xl">
+                <p>2x faster user workflows</p>
+                <p>50% shorter time-to-market</p>
+                <p>Nominated for UX Design Award 2024</p>
+
+                <a
+                  href=""
+                  class="mt-10 relative text-center w-full lg:w-32 p-4 text-white text-xs 2xl:text-sm tracking-widest font-semibold bg-black rounded-sm overflow-hidden group"
+                >
+                  <span
+                    class="absolute inset-0 bg-white rounded-sm border border-[#272727] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+                  ></span>
+                  <span
+                    class="relative z-10 group-hover:text-[#272727] transition-colors duration-300"
+                    >EXPLORE -></span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- results wrapper -->
+          </div>
+        </div>
+        <!-- project -->
+      </div>
+      <!-- projects -->
+
+      <!-- footer -->
+      <div
+        class="bg-[#080d10] text-neutral-content primary-font flex items-end justify-center"
+      >
+        <div class="w-full">
+          <!-- Main Footer -->
+          <footer class="footer sm:footer-horizontal p-10">
+            <aside>
+              <img
+                src="assets/images/NEXALOGO.png"
+                class="w-[100px] 2xl:w-[130px]"
+                alt=""
+              />
+              <p class="2xl:text-lg">
+                NexaNode Dev Company.
+                <br />
+                Providing Reliable Tech Since 2025
+              </p>
+            </aside>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">
+                Explore our Website
+              </h6>
+              <a class="link link-hover 2xl:text-base" href="index.html"
+                >Home</a
+              >
+              <a class="link link-hover 2xl:text-base" href="blogs.html"
+                >Blogs</a
+              >
+              <a class="link link-hover 2xl:text-base">Projects</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">
+                Contacts & Services
+              </h6>
+              <a
+                class="link link-hover 2xl:text-base"
+                href="index.html#contact-section"
+                >Inquiries</a
+              >
+              <a class="link link-hover 2xl:text-base">Contact</a>
+              <a
+                class="link link-hover 2xl:text-base"
+                href="index.html#service-section"
+                >Services</a
+              >
+            </nav>
+            <nav>
+              <h6 class="footer-title secondary-font 2xl:text-lg">Legal</h6>
+              <a class="link link-hover 2xl:text-base">Terms of use</a>
+              <a class="link link-hover 2xl:text-base">Privacy policy</a>
+              <a class="link link-hover 2xl:text-base">Cookie policy</a>
+            </nav>
+          </footer>
+
+          <!-- Divider -->
+          <div class="border-t border-neutral-content/20 mx-10"></div>
+
+          <!-- Copyright Bar -->
+          <footer class="footer sm:footer-horizontal items-center p-4 px-10">
+            <aside class="grid-flow-col items-center">
+              <p class="2xl:text-base">© NexaNode - All right reserved</p>
+            </aside>
+            <nav
+              class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+            >
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current 2xl:w-7 2xl:h-7"
+                >
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  ></path>
+                </svg>
+              </a>
+            </nav>
+          </footer>
+        </div>
+      </div>
+      <!-- footer -->
+    </div>
+    <!-- projects_wrapper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+
+    <script>
+      function slideRight(selector, options = {}) {
+        document.querySelectorAll(selector).forEach((el) => {
+          const items = el.children.length ? el.children : [el];
+          gsap.from(items, {
+            x: options.x || -50,
+            opacity: 0,
+            duration: options.duration || 1,
+            ease: options.ease || "power3.out",
+            stagger: items.length > 1 ? options.stagger || 0.2 : 0,
+            scrollTrigger: {
+              trigger: el,
+              start: options.start || "top 80%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
+      }
+
+      slideRight(".slide-right");
+    </script>
+  </body>
+</html>
