@@ -13,3 +13,18 @@ window.addEventListener("load", () => {
     },
   });
 });
+
+let scrollSpeed = 2.5; // lower = slower
+
+window.addEventListener(
+  "wheel",
+  function (e) {
+    e.preventDefault();
+
+    window.scrollBy({
+      top: e.deltaY * scrollSpeed,
+      behavior: "smooth",
+    });
+  },
+  { passive: false },
+);
